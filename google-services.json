@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1033961812910",
+    "project_id": "signin-fe45c",
+    "storage_bucket": "signin-fe45c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033961812910:android:f052aafcce700582664e3f",
+        "android_client_info": {
+          "package_name": "com.mustafa.googlesignin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033961812910-b3jr0eipduqi7hf9dt4qrpl8hh2t7lmg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mustafa.googlesignin",
+            "certificate_hash": "e0e0c4fe4b230afbb27017d1d1ce55c9c8d8bff8"
+          }
+        },
+        {
+          "client_id": "1033961812910-mqfumo9b67rfhlpvi0o6tpp8keodmhoj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBa-Eje2pTC9iZgJIRu_BjGg0kWKq-ltJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033961812910-mqfumo9b67rfhlpvi0o6tpp8keodmhoj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
