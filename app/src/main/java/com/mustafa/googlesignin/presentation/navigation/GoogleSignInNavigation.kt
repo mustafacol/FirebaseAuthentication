@@ -32,6 +32,12 @@ fun GoogleSignInNavigation(googleAuthClient: GoogleAuthClient) {
             val viewModel = viewModel<SignInViewModel>()
             val state by viewModel.state.collectAsStateWithLifecycle()
 
+            LaunchedEffect(key1 = Unit) {
+                if (googleAuthClient.getSignedUser() != null) {
+                    navController.navigate("profile")
+                }
+            }
+
             val launcher =
                 rememberLauncherForActivityResult(
                     contract = ActivityResultContracts.StartIntentSenderForResult(),
