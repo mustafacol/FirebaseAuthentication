@@ -1,1 +1,1 @@
-# GoogleSignInCompose
+# Firebase Authentication with Google and Facebook
