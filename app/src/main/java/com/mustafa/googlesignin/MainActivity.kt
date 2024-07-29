@@ -7,14 +7,12 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.google.android.gms.auth.api.identity.Identity
-import com.mustafa.googlesignin.presentation.navigation.GoogleSignInNavigation
-import com.mustafa.googlesignin.presentation.signin.GoogleAuthClient
+import com.mustafa.googlesignin.presentation.navigation.GoogleSignInApp
+import com.mustafa.googlesignin.presentation.signin.google.GoogleAuthClient
 import com.mustafa.googlesignin.ui.theme.GoogleSignInTheme
+
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 class MainActivity : ComponentActivity() {
@@ -25,30 +23,15 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
         setContent {
             GoogleSignInTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    GoogleSignInNavigation(googleAuthClient)
+                Scaffold(modifier = Modifier.fillMaxSize()) { _ ->
+                    GoogleSignInApp(googleAuthClient)
 
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    GoogleSignInTheme {
-        Greeting("Android")
     }
 }

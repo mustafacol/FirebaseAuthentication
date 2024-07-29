@@ -72,6 +72,9 @@ dependencies {
     implementation (libs.androidx.navigation.compose)
     implementation (libs.coil.compose)
 
+    implementation(libs.facebook.login)
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

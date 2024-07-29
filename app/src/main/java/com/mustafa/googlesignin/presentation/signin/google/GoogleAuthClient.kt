@@ -1,4 +1,4 @@
-package com.mustafa.googlesignin.presentation.signin
+package com.mustafa.googlesignin.presentation.signin.google
 
 import android.content.Context
 import android.content.Intent
@@ -9,6 +9,8 @@ import com.google.firebase.Firebase
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.auth
 import com.mustafa.googlesignin.R
+import com.mustafa.googlesignin.presentation.signin.SignInResult
+import com.mustafa.googlesignin.presentation.signin.UserData
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.tasks.await
 
@@ -17,7 +19,6 @@ class GoogleAuthClient(
     private val client: SignInClient
 ) {
     private val auth = Firebase.auth
-
     suspend fun signIn(): IntentSender? {
         val result = try {
             client.beginSignIn(buildSignInRequest()).await()
